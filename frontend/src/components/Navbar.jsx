@@ -5,7 +5,7 @@ export default function Navbar() {
 
         <div className="flex items-center gap-2">
           <div className="w-7">
-            <img src="/src/assets/white_logo.png" alt="" />
+            <img src="/white_logo.svg" alt="" />
           </div>
           <span className="font-semibold text-dark-50 text-xl hidden sm:inline">
             Trackr
