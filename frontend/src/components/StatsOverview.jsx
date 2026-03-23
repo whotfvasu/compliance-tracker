@@ -3,22 +3,22 @@ export default function StatsOverview({ tasks }) {
     {
       label: "Total Tasks",
       value: tasks.length,
-      color: "border-slate-300",
+      color: "border-grey-700",
     },
     {
       label: "Pending",
       value: tasks.filter((t) => t.status === "Pending").length,
-      color: "border-yellow-300",
+      color: "border-grey-700",
     },
     {
       label: "In Progress",
       value: tasks.filter((t) => t.status === "In Progress").length,
-      color: "border-blue-300",
+      color: "border-grey-700",
     },
     {
       label: "Completed",
       value: tasks.filter((t) => t.status === "Completed").length,
-      color: "border-green-300",
+      color: "border-grey-700",
     },
   ];
 

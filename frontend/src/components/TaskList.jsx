@@ -29,14 +29,14 @@ export default function TaskList({ tasks, onTaskUpdated }) {
 
   return (
     <div className="card">
-      <h3 className="text-lg font-bold text-slate-900 mb-4">Tasks</h3>
+      <h3 className="text-lg font-bold text-grey-100 mb-4">Tasks</h3>
 
       {/* Filters */}
       <div className="flex gap-3 mb-6">
         <select
           value={filters.status}
           onChange={(e) => setFilters({ ...filters, status: e.target.value })}
-          className="px-3 py-2 border border-slate-300 rounded-md text-xs focus:ring-2 focus:ring-blue-500 bg-white"
+          className="px-3 py-2 border border-grey-800 rounded-md text-xs focus:ring-2 focus:ring-grey-600 bg-grey-900 text-grey-100"
         >
           <option value="">All Status</option>
           <option value="Pending">Pending</option>
@@ -47,7 +47,7 @@ export default function TaskList({ tasks, onTaskUpdated }) {
         <select
           value={filters.category}
           onChange={(e) => setFilters({ ...filters, category: e.target.value })}
-          className="px-3 py-2 border border-slate-300 rounded-md text-xs focus:ring-2 focus:ring-blue-500 bg-white"
+          className="px-3 py-2 border border-grey-800 rounded-md text-xs focus:ring-2 focus:ring-grey-600 bg-grey-900 text-grey-100"
         >
           <option value="">All Categories</option>
           {categories.map((cat) => (
@@ -61,7 +61,7 @@ export default function TaskList({ tasks, onTaskUpdated }) {
       {/* Task List */}
       <div className="space-y-3">
         {filteredTasks.length === 0 ? (
-          <p className="text-slate-500 text-center py-8 text-sm">
+          <p className="text-grey-600 text-center py-8 text-sm">
             No tasks found
           </p>
         ) : (
@@ -72,42 +72,40 @@ export default function TaskList({ tasks, onTaskUpdated }) {
                 key={task.id}
                 className={`p-4 border rounded-md text-sm ${
                   overdue
-                    ? "bg-red-50 border-red-200"
-                    : "bg-slate-50 border-slate-200"
+                    ? "bg-grey-900 border-grey-700"
+                    : "bg-grey-900 border-grey-800"
                 }`}
               >
                 <div className="flex items-start justify-between gap-4">
                   <div className="flex-1">
                     <h4
                       className={`font-semibold ${
-                        overdue ? "text-red-700" : "text-slate-900"
+                        overdue ? "text-red-400" : "text-grey-100"
                       }`}
                     >
                       {task.title}
                       {overdue && (
-                        <span className="ml-2 text-red-600 text-xs">
+                        <span className="ml-2 text-red-500 text-xs">
                           ⚠ OVERDUE
                         </span>
                       )}
                     </h4>
                     {task.description && (
-                      <p className="text-xs text-slate-600 mt-2">
+                      <p className="text-xs text-grey-400 mt-2">
                         {task.description}
                       </p>
                     )}
                     <div className="flex flex-wrap gap-2 mt-3">
-                      <span className={`badge ${getStatusColor(task.status)}`}>
+                      <span className="badge bg-grey-800 text-grey-200">
                         {task.status}
                       </span>
-                      <span className="badge bg-slate-100 text-slate-700">
+                      <span className="badge bg-grey-800 text-grey-300">
                         {task.category}
                       </span>
-                      <span
-                        className={`badge font-bold ${getPriorityColor(task.priority)}`}
-                      >
+                      <span className="badge bg-grey-800 text-grey-300">
                         {task.priority}
                       </span>
-                      <span className="badge bg-slate-100 text-slate-700">
+                      <span className="badge bg-grey-800 text-grey-300">
                         {formatDate(task.dueDate)}
                       </span>
                     </div>
@@ -118,7 +116,7 @@ export default function TaskList({ tasks, onTaskUpdated }) {
                     onChange={(e) =>
                       handleStatusChange(task.id, e.target.value)
                     }
-                    className="px-2 py-1 border border-slate-300 rounded text-xs focus:ring-2 focus:ring-blue-500 bg-white whitespace-nowrap"
+                    className="px-2 py-1 border border-grey-800 rounded text-xs focus:ring-2 focus:ring-grey-600 bg-grey-900 text-grey-100 whitespace-nowrap"
                   >
                     <option value="Pending">Pending</option>
                     <option value="In Progress">In Progress</option>

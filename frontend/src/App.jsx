@@ -56,22 +56,22 @@ export default function App() {
 
   if (loading) {
     return (
-      <div className="min-h-screen bg-slate-50 flex items-center justify-center">
-        <div className="text-slate-600 text-sm">Loading...</div>
+      <div className="min-h-screen bg-grey-950 flex items-center justify-center">
+        <div className="text-grey-400 text-sm">Loading...</div>
       </div>
     );
   }
 
   if (error) {
     return (
-      <div className="min-h-screen bg-slate-50 flex items-center justify-center">
-        <div className="text-red-600 text-sm">{error}</div>
+      <div className="min-h-screen bg-grey-950 flex items-center justify-center">
+        <div className="text-red-400 text-sm">{error}</div>
       </div>
     );
   }
 
   return (
-    <div className="min-h-screen bg-slate-50">
+    <div className="min-h-screen bg-grey-950">
       <Navbar />
 
       <main className="max-w-7xl mx-auto px-6 py-8 pt-28">

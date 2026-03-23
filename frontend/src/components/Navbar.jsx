@@ -1,13 +1,13 @@
 export default function Navbar() {
   return (
     <nav className="fixed top-6 left-1/2 transform -translate-x-1/2 z-50 w-11/12 max-w-2xl">
-      <div className="bg-white border border-slate-200 rounded-full shadow-sm px-6 py-3 flex items-center justify-between">
+      <div className="bg-grey-900 border border-grey-800 rounded-full shadow-sm px-6 py-3 flex items-center justify-between">
         {/* Logo */}
         <div className="flex items-center gap-2">
-          <div className="w-8 h-8 bg-slate-900 rounded-full flex items-center justify-center">
-            <span className="text-white text-sm font-bold">CT</span>
+          <div className="w-8 h-8 bg-grey-700 rounded-full flex items-center justify-center">
+            <span className="text-grey-100 text-sm font-bold">CT</span>
           </div>
-          <span className="font-semibold text-slate-900 text-sm hidden sm:inline">
+          <span className="font-semibold text-grey-100 text-sm hidden sm:inline">
             Compliance Tracker
           </span>
         </div>
@@ -18,7 +18,7 @@ export default function Navbar() {
             href="https://github.com"
             target="_blank"
             rel="noopener noreferrer"
-            className="p-2 hover:bg-slate-50 rounded-full transition text-slate-600"
+            className="p-2 hover:bg-grey-800 rounded-full transition text-grey-400"
             title="GitHub"
           >
             <svg className="w-4 h-4" fill="currentColor" viewBox="0 0 24 24">
@@ -27,7 +27,7 @@ export default function Navbar() {
           </a>
 
           <button
-            className="p-2 hover:bg-slate-50 rounded-full transition text-slate-600"
+            className="p-2 hover:bg-grey-800 rounded-full transition text-grey-400"
             title="Add"
           >
             <svg

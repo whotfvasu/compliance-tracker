@@ -83,19 +83,20 @@ body {
     sans-serif;
   line-height: 1.6;
   letter-spacing: 0.3px;
+  @apply bg-grey-950 text-grey-100;
 }
 
 @layer components {
   .card {
-    @apply bg-white rounded-lg border border-slate-200 shadow-sm p-6;
+    @apply bg-grey-900 rounded-lg border border-grey-800 shadow-sm p-6;
   }
 
   .card-header {
-    @apply text-xs font-medium text-slate-500 uppercase tracking-widest mb-3;
+    @apply text-xs font-medium text-grey-400 uppercase tracking-widest mb-3;
   }
 
   .stat-value {
-    @apply text-3xl font-bold text-slate-900 mb-1 tracking-tight;
+    @apply text-3xl font-bold text-grey-100 mb-1 tracking-tight;
   }
 
   .badge {

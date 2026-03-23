@@ -13,18 +13,18 @@ export const formatDate = (date) => {
 
 export const getStatusColor = (status) => {
   const colors = {
-    Pending: "bg-yellow-100 text-yellow-800",
-    "In Progress": "bg-blue-100 text-blue-800",
-    Completed: "bg-green-100 text-green-800",
+    Pending: "bg-grey-800 text-grey-200",
+    "In Progress": "bg-grey-800 text-grey-200",
+    Completed: "bg-grey-800 text-grey-200",
   };
-  return colors[status] || "bg-gray-100 text-gray-800";
+  return colors[status] || "bg-grey-800 text-grey-200";
 };
 
 export const getPriorityColor = (priority) => {
   const colors = {
-    Low: "text-gray-500",
-    Medium: "text-orange-500",
-    High: "text-red-500",
+    Low: "text-grey-400",
+    Medium: "text-grey-300",
+    High: "text-grey-200",
   };
-  return colors[priority] || "text-gray-500";
+  return colors[priority] || "text-grey-400";
 };
