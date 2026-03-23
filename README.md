@@ -8,11 +8,11 @@ Compliance Tracker helps organizations manage regulatory compliance tasks by pro
 
 ## Tech Stack
 
-✧ Frontend: React 19, Vite, Tailwind CSS
-✧ Backend: Node.js, Express
-✧ Database: PostgreSQL (Supabase)
-✧ ORM: Prisma
-✧ API: REST
+- **Frontend:** React 19, Vite, Tailwind CSS
+- **Backend:** Node.js, Express
+- **Database:** PostgreSQL (Supabase)
+- **ORM:** Prisma
+- **API:** REST
 
 ## Project Structure
 
@@ -42,43 +42,43 @@ complianceTracker/
 
 ## Features
 
-❊ Client Management: Add and manage multiple clients with entity information
-❊ Task Tracking: Create, update, and delete compliance tasks
-❊ Status Management: Update task status (Pending, In Progress, Completed)
-❊ Priority Levels: Set task priority (Low, Medium, High) with visual indicators
-❊ Task Filtering: Filter by status and category
-❊ Overdue Detection: Automatic highlighting of overdue tasks in red
-❊ Dashboard: Overview cards showing total, pending, in-progress, and completed tasks
-❊ Responsive Design: Works on desktop, tablet, and mobile devices
-❊ Dark Theme: Modern dark UI with #333 primary color and sage/greenish-grey accents
-❊ CORS Enabled: Cross-origin requests supported
+- Client Management: Add and manage multiple clients with entity information
+- Task Tracking: Create, update, and delete compliance tasks
+- Status Management: Update task status (Pending, In Progress, Completed)
+- Priority Levels: Set task priority (Low, Medium, High) with visual indicators
+- Task Filtering: Filter by status and category
+- Overdue Detection: Automatic highlighting of overdue tasks in red
+- Dashboard: Overview cards showing total, pending, in-progress, and completed tasks
+- Responsive Design: Works on desktop, tablet, and mobile devices
+- Dark Theme: Modern dark UI with #333 primary color and sage/greenish-grey accents
+- CORS Enabled: Cross-origin requests supported
 
 ## Color Scheme
 
-Primary: #333 (Dark)
-Accents: Sage/greenish-grey palette
-Risk/Alert: Red colors for high priority and overdue items
+- **Primary:** #333 (Dark)
+- **Accents:** Sage/greenish-grey palette
+- **Risk/Alert:** Red colors for high priority and overdue items
 
 ## Database Schema
 
-❐ Client Model
-➢ id (Integer, Primary Key)
-➢ name (String)
-➢ country (String)
-➢ entityType (String)
-➢ tasks (One-to-many relationship with Task)
+### Client Model
 
-❐ Task Model
-➢ id (Integer, Primary Key)
-➢ title (String)
-➢ description (String, optional)
-➢ category (String)
-➢ dueDate (DateTime)
-➢ status (String: Pending, In Progress, Completed)
-➢ priority (String: Low, Medium, High)
-➢ clientId (Integer, Foreign Key)
+- **id** (Integer, Primary Key)
+- **name** (String)
+- **country** (String)
+- **entityType** (String)
+- **tasks** (One-to-many relationship with Task)
 
-## Setup Instructions
+### Task Model
+
+- **id** (Integer, Primary Key)
+- **title** (String)
+- **description** (String, optional)
+- **category** (String)
+- **dueDate** (DateTime)
+- **status** (String: Pending, In Progress, Completed)
+- **priority** (String: Low, Medium, High)
+- **clientId** (Integer, Foreign Key)
 
 ### Prerequisites
 
@@ -201,12 +201,12 @@ PATCH /api/tasks/1
 
 ## Development Notes
 
-❐ CORS must be applied before routes in Express
-❐ Prisma client is initialized once and reused to avoid connection leaks
-❐ Tailwind color palette uses custom `dark`, `sage`, and `risk` colors
-❐ Components use Nohemi font family across all weights (100-900)
-❐ API service layer abstracts HTTP calls in `frontend/src/services/api.js`
-❐ Color helper functions handle priority and status color mapping
+- CORS must be applied before routes in Express
+- Prisma client is initialized once and reused to avoid connection leaks
+- Tailwind color palette uses custom `dark`, `sage`, and `risk` colors
+- Components use Nohemi font family across all weights (100-900)
+- API service layer abstracts HTTP calls in `frontend/src/services/api.js`
+- Color helper functions handle priority and status color mapping
 
 ## Troubleshooting
 
@@ -229,13 +229,13 @@ PATCH /api/tasks/1
 
 ## Future Enhancements
 
-→ User authentication and role-based access
-→ Task templates and batch operations
-→ Compliance document upload and storage
-→ Email notifications for upcoming deadlines
-→ Advanced reporting and analytics
-→ Audit trail for compliance tracking
-→ Integration with external compliance tools
+- User authentication and role-based access
+- Task templates and batch operations
+- Compliance document upload and storage
+- Email notifications for upcoming deadlines
+- Advanced reporting and analytics
+- Audit trail for compliance tracking
+- Integration with external compliance tools
 
 ## Git Workflow
 
