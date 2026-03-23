@@ -1,20 +1,25 @@
-import express from 'express';
-import { PrismaClient } from '@prisma/client';
-import dotenv from 'dotenv';
+import express from "express";
+import { PrismaClient } from "@prisma/client";
+import dotenv from "dotenv";
+import clientRoutes from "./routes/clients.js";
+import taskRoutes from "./routes/tasks.js";
+import cors from "cors";
 
 dotenv.config();
-
 
 const app = express();
 const prisma = new PrismaClient();
 
 const PORT = process.env.PORT || 3001;
 
+app.use("/api/clients", clientRoutes);
+app.use("/api/tasks", taskRoutes);
+
 app.use(cors());
 app.use(express.json());
 
-app.get('/api/health', (req, res) => {
-  res.json({ status: 'ok' });
+app.get("/api/health", (req, res) => {
+  res.json({ status: "ok" });
 });
 
 app.use((err, req, res, next) => {
@@ -30,7 +35,7 @@ app.listen(PORT, () => {
   console.log(`Server is running on port ${PORT}`);
 });
 
-process.on('SIGINT', async () => {
+process.on("SIGINT", async () => {
   await prisma.$disconnect();
   process.exit(0);
 });
