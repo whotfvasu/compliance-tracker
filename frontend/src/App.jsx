@@ -13,12 +13,10 @@ export default function App() {
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState("");
 
-  // Fetch clients on mount
   useEffect(() => {
     fetchClients();
   }, []);
 
-  // Fetch tasks when client is selected
   useEffect(() => {
     if (selectedClientId) {
       fetchTasks();
@@ -56,22 +54,22 @@ export default function App() {
 
   if (loading) {
     return (
-      <div className="min-h-screen bg-slate-50 flex items-center justify-center">
-        <div className="text-slate-600 text-sm">Loading...</div>
+      <div className="min-h-screen bg-dark-900 flex items-center justify-center">
+        <div className="text-dark-200 text-sm">Loading...</div>
       </div>
     );
   }
 
   if (error) {
     return (
-      <div className="min-h-screen bg-slate-50 flex items-center justify-center">
-        <div className="text-red-600 text-sm">{error}</div>
+      <div className="min-h-screen bg-dark-900 flex items-center justify-center">
+        <div className="text-risk-500 text-sm">{error}</div>
       </div>
     );
   }
 
   return (
-    <div className="min-h-screen bg-slate-50">
+    <div className="min-h-screen bg-dark-900">
       <Navbar />
 
       <main className="max-w-7xl mx-auto px-6 py-8 pt-28">
@@ -80,7 +78,7 @@ export default function App() {
             <StatsOverview tasks={tasks} />
 
             <div className="grid grid-cols-1 lg:grid-cols-4 gap-6">
-              {/* Sidebar */}
+
               <div className="lg:col-span-1">
                 <ClientList
                   clients={clients}
@@ -89,7 +87,6 @@ export default function App() {
                 />
               </div>
 
-              {/* Main Content */}
               <div className="lg:col-span-3 space-y-6">
                 <TaskForm
                   clientId={selectedClientId}

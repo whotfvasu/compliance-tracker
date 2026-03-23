@@ -44,10 +44,10 @@ export default function TaskForm({ clientId, onTaskCreated }) {
 
   return (
     <form onSubmit={handleSubmit} className="card">
-      <h3 className="text-lg font-bold text-slate-900 mb-4">Add Task</h3>
+      <h3 className="text-lg font-bold text-dark-50 mb-4">Add Task</h3>
 
       {error && (
-        <div className="mb-4 p-3 bg-red-50 text-red-700 rounded-md text-xs border border-red-200">
+        <div className="mb-4 p-3 bg-risk-900 text-risk-300 rounded-md text-xs border border-risk-700">
           {error}
         </div>
       )}
@@ -60,7 +60,7 @@ export default function TaskForm({ clientId, onTaskCreated }) {
           value={formData.title}
           onChange={handleChange}
           required
-          className="w-full px-3 py-2 border border-slate-300 rounded-md text-sm focus:ring-2 focus:ring-blue-500 focus:border-transparent bg-white"
+          className="w-full px-3 py-2 border border-sage-700 rounded-md text-sm focus:ring-2 focus:ring-sage-600 focus:border-transparent bg-dark-700 text-dark-50"
         />
 
         <textarea
@@ -69,7 +69,7 @@ export default function TaskForm({ clientId, onTaskCreated }) {
           value={formData.description}
           onChange={handleChange}
           rows="2"
-          className="w-full px-3 py-2 border border-slate-300 rounded-md text-sm focus:ring-2 focus:ring-blue-500 focus:border-transparent bg-white resize-none"
+          className="w-full px-3 py-2 border border-sage-700 rounded-md text-sm focus:ring-2 focus:ring-sage-600 focus:border-transparent bg-dark-700 text-dark-50 resize-none"
         />
 
         <div className="grid grid-cols-2 gap-3">
@@ -77,7 +77,7 @@ export default function TaskForm({ clientId, onTaskCreated }) {
             name="category"
             value={formData.category}
             onChange={handleChange}
-            className="px-3 py-2 border border-slate-300 rounded-md text-sm focus:ring-2 focus:ring-blue-500 focus:border-transparent bg-white"
+            className="px-3 py-2 border border-sage-700 rounded-md text-sm focus:ring-2 focus:ring-sage-600 focus:border-transparent bg-dark-700 text-dark-50"
           >
             <option>Compliance</option>
             <option>Tax</option>
@@ -90,7 +90,7 @@ export default function TaskForm({ clientId, onTaskCreated }) {
             name="priority"
             value={formData.priority}
             onChange={handleChange}
-            className="px-3 py-2 border border-slate-300 rounded-md text-sm focus:ring-2 focus:ring-blue-500 focus:border-transparent bg-white"
+            className="px-3 py-2 border border-sage-700 rounded-md text-sm focus:ring-2 focus:ring-sage-600 focus:border-transparent bg-dark-700 text-dark-50"
           >
             <option>Low</option>
             <option>Medium</option>
@@ -104,13 +104,13 @@ export default function TaskForm({ clientId, onTaskCreated }) {
           value={formData.dueDate}
           onChange={handleChange}
           required
-          className="w-full px-3 py-2 border border-slate-300 rounded-md text-sm focus:ring-2 focus:ring-blue-500 focus:border-transparent bg-white"
+          className="w-full px-3 py-2 border border-sage-700 rounded-md text-sm focus:ring-2 focus:ring-sage-600 focus:border-transparent bg-dark-700 text-dark-50"
         />
 
         <button
           type="submit"
           disabled={loading}
-          className="w-full bg-blue-600 text-white py-2 rounded-md hover:bg-blue-700 disabled:opacity-50 transition text-sm font-semibold"
+          className="w-full bg-dark-800 text-dark-50 py-2 rounded-md hover:bg-dark-700 disabled:opacity-50 transition text-sm font-semibold border border-sage-700"
         >
           {loading ? "Creating..." : "Add Task"}
         </button>

@@ -1,24 +1,23 @@
 export default function Navbar() {
   return (
-    <nav className="fixed top-6 left-1/2 transform -translate-x-1/2 z-50 w-11/12 max-w-2xl">
-      <div className="bg-white border border-slate-200 rounded-full shadow-sm px-6 py-3 flex items-center justify-between">
-        {/* Logo */}
+    <nav className="fixed top-6 left-1/2 transform -translate-x-1/2 z-50 w-[500px] max-w-2xl">
+      <div className="bg-dark-800 border border-sage-700 rounded-2xl shadow-sm px-6 py-3 flex items-center justify-between">
+
         <div className="flex items-center gap-2">
-          <div className="w-8 h-8 bg-slate-900 rounded-full flex items-center justify-center">
-            <span className="text-white text-sm font-bold">CT</span>
+          <div className="w-7">
+            <img src="/src/assets/white_logo.png" alt="" />
           </div>
-          <span className="font-semibold text-slate-900 text-sm hidden sm:inline">
-            Compliance Tracker
+          <span className="font-semibold text-dark-50 text-xl hidden sm:inline">
+            Trackr
           </span>
         </div>
 
-        {/* Right Actions */}
         <div className="flex items-center gap-3">
           <a
             href="https://github.com"
             target="_blank"
             rel="noopener noreferrer"
-            className="p-2 hover:bg-slate-50 rounded-full transition text-slate-600"
+            className="p-2 hover:bg-dark-700 rounded-full transition text-sage-400"
             title="GitHub"
           >
             <svg className="w-4 h-4" fill="currentColor" viewBox="0 0 24 24">
@@ -26,24 +25,6 @@ export default function Navbar() {
             </svg>
           </a>
 
-          <button
-            className="p-2 hover:bg-slate-50 rounded-full transition text-slate-600"
-            title="Add"
-          >
-            <svg
-              className="w-4 h-4"
-              fill="none"
-              stroke="currentColor"
-              viewBox="0 0 24 24"
-            >
-              <path
-                strokeLinecap="round"
-                strokeLinejoin="round"
-                strokeWidth={2}
-                d="M12 4v16m8-8H4"
-              />
-            </svg>
-          </button>
         </div>
       </div>
     </nav>

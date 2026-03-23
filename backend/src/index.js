@@ -12,14 +12,27 @@ const prisma = new PrismaClient();
 
 const PORT = process.env.PORT || 3001;
 
-app.use("/api/clients", clientRoutes);
-app.use("/api/tasks", taskRoutes);
-
 app.use(cors());
 app.use(express.json());
 
+app.use("/api/clients", clientRoutes);
+app.use("/api/tasks", taskRoutes);
+
 app.get("/api/health", (req, res) => {
   res.json({ status: "ok" });
+});
+
+app.get("/api/db-health", async (req, res) => {
+  try {
+    await prisma.$queryRaw`SELECT 1`;
+    res.json({ status: "Database connected successfully" });
+  } catch (error) {
+    res.status(500).json({
+      status: "Database connection failed",
+      error: error.message,
+      databaseUrl: process.env.DATABASE_URL ? "Set" : "Not set",
+    });
+  }
 });
 
 app.use((err, req, res, next) => {
