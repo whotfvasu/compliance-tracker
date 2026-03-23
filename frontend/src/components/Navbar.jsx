@@ -14,7 +14,7 @@ export default function Navbar() {
 
         <div className="flex items-center gap-3">
           <a
-            href="https://github.com"
+            href="https://github.com/whotfvasu/compliance-tracker"
             target="_blank"
             rel="noopener noreferrer"
             className="p-2 hover:bg-dark-700 rounded-full transition text-sage-400"
